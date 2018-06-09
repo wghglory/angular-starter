@@ -175,6 +175,20 @@
   dependencies:
     tslib "^1.9.0"
 
+"@clr/angular@^0.12.0-rc.2":
+  version "0.12.0-rc.2"
+  resolved "http://registry.npm.taobao.org/@clr/angular/download/@clr/angular-0.12.0-rc.2.tgz#b8eda3cd3d7d252ea841d3ddf9aaee65564b5656"
+  dependencies:
+    tslib "^1.9.0"
+
+"@clr/icons@^0.12.0-rc.2":
+  version "0.12.0-rc.2"
+  resolved "http://registry.npm.taobao.org/@clr/icons/download/@clr/icons-0.12.0-rc.2.tgz#7e5c4994fdbad27378a9085d7c86a8ac6c7d7d72"
+
+"@clr/ui@^0.12.0-rc.2":
+  version "0.12.0-rc.2"
+  resolved "http://registry.npm.taobao.org/@clr/ui/download/@clr/ui-0.12.0-rc.2.tgz#8570befba948098b3bd0dd600255f4dfbfd627cb"
+
 "@ngtools/webpack@6.0.8":
   version "6.0.8"
   resolved "http://registry.npm.taobao.org/@ngtools/webpack/download/@ngtools/webpack-6.0.8.tgz#a05bce526aee9da62bb230a95fba83fee99d0bca"
