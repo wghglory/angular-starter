@@ -1,0 +1,49 @@
+<header class="header header-6">
+  <div class="branding">
+    <a routerLink="/"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{exact: true}"
+       class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">Project Clarity</span>
+    </a>
+  </div>
+  <div class="header-nav">
+    <a *ngFor="let menu of menuItems"
+       [routerLink]="menu.link"
+       routerLinkActive="active"
+       class="nav-link nav-text">{{menu.caption}}</a>
+    <!-- <a [routerLink]="['/home']"
+       routerLinkActive="active"
+       class="nav-link nav-text">Home</a>
+    -->
+  </div>
+  <div class="header-actions">
+    <clr-dropdown>
+      <button class="nav-icon"
+              clrDropdownTrigger>
+        <clr-icon shape="user"></clr-icon>
+        <clr-icon shape="caret down"></clr-icon>
+      </button>
+      <clr-dropdown-menu *clrIfOpen
+                         clrPosition="bottom-right">
+        <a [routerLink]="['/about']"
+           clrDropdownItem>About</a>
+        <a [routerLink]="['/logout']"
+           clrDropdownItem>Log out</a>
+      </clr-dropdown-menu>
+    </clr-dropdown>
+  </div>
+</header>
+
+<nav *ngIf="this.subMenuItems"
+     class="subnav">
+  <ul class="nav">
+    <li *ngFor="let subMenu of this.subMenuItems"
+        class="nav-item">
+      <a class="nav-link"
+         routerLinkActive="active"
+         [routerLink]="subMenu.link">{{subMenu.caption}}</a>
+    </li>
+  </ul>
+</nav>
