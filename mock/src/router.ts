@@ -6,7 +6,7 @@ const router = new Router({ prefix: '/api' });
 const hook = hookOn(router);
 
 import { EVENTS } from './database/events';
-import { ISession } from './../../src/app/models/event.model';
+import { ISession } from './../../src/app/shared/models/event.model';
 import { USERS } from './database/users';
 
 if (`******************* events ********************`) {
