@@ -9,8 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule, routedComponents, routedServices } from './app-routing.module';
-// lazy loading feature modules
-import { ConfigureModule } from './configure/configure.module';
+// eager loading feature modules
+// import { ConfigureModule } from './configure/configure.module';
 
 // app component
 import { AppComponent } from './app.component';
@@ -32,7 +32,7 @@ import { AppComponent } from './app.component';
     CoreModule,
     SharedModule,
 
-    ConfigureModule,
+    // ConfigureModule,  // only need for eager loading. Remove it for lazying loading
 
     AppRoutingModule, // last
   ],
