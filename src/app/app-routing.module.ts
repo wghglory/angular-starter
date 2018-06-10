@@ -21,22 +21,22 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  // lazy loading
-  {
-    path: 'configure',
-    loadChildren: () => ConfigureModule,
-    // loadChildren: './configure/configure.module#ConfigureModule',
-  },
-  // // eager loading
+  // // lazy loading
   // {
   //   path: 'configure',
-  //   component: ConfigureComponent,
-  //   children: [
-  //     { path: 'certificate', component: CertificateComponent },
-  //     { path: 'support', component: SupportComponent },
-  //     { path: '', redirectTo: 'certificate', pathMatch: 'full' },
-  //   ],
+  //   loadChildren: () => ConfigureModule,
+  //   // loadChildren: './configure/configure.module#ConfigureModule',
   // },
+  // eager loading
+  {
+    path: 'configure',
+    component: ConfigureComponent,
+    children: [
+      { path: 'certificate', component: CertificateComponent },
+      { path: 'support', component: SupportComponent },
+      { path: '', redirectTo: 'certificate', pathMatch: 'full' },
+    ],
+  },
   { path: '**', component: NotFoundComponent },
   /* {
     path: 'events/create',

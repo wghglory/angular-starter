@@ -17,11 +17,10 @@ const routes: Routes = [
   //     { path: 'support', component: SupportComponent },
   //   ],
   // },
-
-  // way 2: certificate and support don't share any html, so no need to create configure.component
-  { path: 'certificate', component: CertificateComponent },
-  { path: 'support', component: SupportComponent },
-  { path: '', redirectTo: 'certificate', pathMatch: 'full' },
+  // // way 2: certificate and support don't share any html, so no need to create configure.component
+  // { path: 'certificate', component: CertificateComponent },
+  // { path: 'support', component: SupportComponent },
+  // { path: '', redirectTo: 'certificate', pathMatch: 'full' },
 ];
 
 export const routedComponents = [ConfigureComponent, CertificateComponent, SupportComponent];
