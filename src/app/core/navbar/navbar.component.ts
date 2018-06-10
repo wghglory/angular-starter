@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd, RouterEvent } from '@angular/router';
-import { filter } from 'rxjs/operators';
 
+import { filter } from 'rxjs/operators';
 import { tap } from 'rxjs/operators';
+
+import { navMap } from './navMap';
 
 import { EventService } from '../../shared/services';
 import { AuthService } from './../services/auth.service';
@@ -57,14 +59,22 @@ export class NavbarComponent implements OnInit {
   subMenuItems;
 
   buildSubNav(pathLevel1, subRouteConfig) {
-    if (subRouteConfig !== undefined) {
-      this.subMenuItems = subRouteConfig.map((r: string) => ({
-        caption: r,
-        link: `${pathLevel1}/${r}`,
-      }));
+    // way 1: create a map
+    if (pathLevel1 in navMap) {
+      this.subMenuItems = navMap[pathLevel1];
     } else {
       this.subMenuItems = undefined;
     }
+
+    // // way 2: read from routing
+    // if (subRouteConfig !== undefined) {
+    //   this.subMenuItems = subRouteConfig.map((r: string) => ({
+    //     caption: r,
+    //     link: `${pathLevel1}/${r}`,
+    //   }));
+    // } else {
+    //   this.subMenuItems = undefined;
+    // }
   }
 
   logout() {
